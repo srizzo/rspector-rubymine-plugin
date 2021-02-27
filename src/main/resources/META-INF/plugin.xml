@@ -1,0 +1,60 @@
+<idea-plugin>
+    <id>io.github.srizzo.rspector</id>
+    <name>RSpector</name>
+    <vendor url="https://github.com/srizzo/rspector-intellij-plugin">Samuel Rizzo</vendor>
+
+    <description><![CDATA[
+      Enhanced RSpec Support for RubyMine
+
+      <ul>
+        <li>Find <code>let</code> variable declarations and usages</li>
+        <li>Refactor <code>let</code> variable names</li>
+      </ul>
+
+    ]]></description>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+    <depends>org.jetbrains.plugins.ruby</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <psi.referenceContributor language="ruby"
+                                  order="first"
+                                  implementation="io.github.srizzo.rspector.referencecontributor.LetDeclarationsReferenceContributor"/>
+
+
+        <findUsagesHandlerFactory implementation="io.github.srizzo.rspector.findusages.LetVariableFindUsagesHandlerFactory"
+                                  order="before Ruby"/>
+
+        <lang.findUsagesProvider language="ruby" order="first"
+                                 implementationClass="io.github.srizzo.rspector.findusages.LetVariableFindUsagesProvider"/>
+
+        <usageTypeProvider implementation="io.github.srizzo.rspector.findusages.LetVariableUsageTypeProvider"
+                           order="before Ruby"/>
+
+        <referencesSearch implementation="io.github.srizzo.rspector.referencesearch.LetVariableReferencesSearch" order="first"/>
+
+<!--        com.intellij.readWriteAccessDetector-->
+<!--        <readWriteAccessDetector implementation=""-->
+
+        <lang.elementManipulator forClass="org.jetbrains.plugins.ruby.ruby.lang.psi.variables.RIdentifier"
+                                 implementationClass="io.github.srizzo.rspector.refactoring.RIdentifierManipulator"/>
+
+        <renamePsiElementProcessor
+                order="first, before ruby"
+                implementation="io.github.srizzo.rspector.refactoring.LetVariableRenameProcessor"/>
+
+        <elementDescriptionProvider
+                order="first"
+                implementation="io.github.srizzo.rspector.LetDeclarationDescriptionProvider"
+        />
+    </extensions>
+
+    <extensions defaultExtensionNs="org.jetbrains.plugins.ruby">
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+</idea-plugin>
