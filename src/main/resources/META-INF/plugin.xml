@@ -1,14 +1,15 @@
 <idea-plugin>
     <id>io.github.srizzo.rspector</id>
     <name>RSpector</name>
-    <vendor url="https://github.com/srizzo/rspector-intellij-plugin">Samuel Rizzo</vendor>
+    <vendor url="https://github.com/srizzo/rspector-rubymine-plugin">Samuel Rizzo</vendor>
 
     <description><![CDATA[
       Enhanced RSpec Support for RubyMine
 
       <ul>
-        <li>Find <code>let</code> variable declarations and usages</li>
-        <li>Refactor <code>let</code> variable names</li>
+        <li><em>Find Usages</em> on <code>let</code> variables</li>
+        <li><em>Go to Declaration or Usages</em> on <code>let</code> variables</li>
+        <li><em>Refactor | Rename...</em> of <code>let</code> variable names and usages</li>
       </ul>
 
     ]]></description>
