@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'io.github.srizzo'
-version '0.0.1.2'
+version '0.0.2'
 
 repositories {
     mavenCentral()
@@ -17,20 +17,23 @@ dependencies {
 
 // See https://github.com/JetBrains/gradle-intellij-plugin/
 intellij {
-    version '2020.3.2'
     type 'IU'
-    plugins = ['org.jetbrains.plugins.ruby:203.6682.115', 'com.google.ide-perf:1.0.3', 'PsiViewer:203-SNAPSHOT']
-    runIde.ideDirectory = "/Applications/IntelliJ IDEA.app/Contents"
-//    runIde.configDirectory = "/Users/ralphus/Development/intellij/mine-sandbox/config"
-//    runIde.pluginsDirectory = "/Users/ralphus/Development/intellij/mine-sandbox/plugins"
-//    runIde.systemDirectory = "/Users/ralphus/Development/intellij/mine-sandbox/system"
+    localPath = "/Applications/IntelliJ IDEA.app/Contents"
+    runPluginVerifier.localPaths = ["/Applications/IntelliJ IDEA.app/Contents"]
+    sandboxDirectory = "/usr/local/var/idea-sandbox"
+    plugins = ['org.jetbrains.plugins.ruby:211.6693.111',
+               'com.google.ide-perf:1.1.0',
+               'com.intellij.java',
+               'PsiViewer:211-SNAPSHOT',
+               'io.github.srizzo.codebuddy.code-buddy-plugin:0.0.5']
 }
 patchPluginXml {
     changeNotes """
-      Add plugin logo"""
+      Compatibility with IntelliJ 2021.1
+    """
 }
 test {
-    useJUnitPlatform()
+    systemProperty "idea.home.path", "/Applications/IntelliJ IDEA.app/Contents"
 }
 runIde {
     jvmArgs "-Djdk.attach.allowAttachSelf=true"

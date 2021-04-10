@@ -2,7 +2,7 @@
 
 Enhanced RSpec Support for RubyMine
 
-https://plugins.jetbrains.com/plugin/16250-rspector
+Install from https://plugins.jetbrains.com/plugin/16250-rspector.
 
 ## Currently:
 
