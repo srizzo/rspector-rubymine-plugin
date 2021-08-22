@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'io.github.srizzo'
-version '0.0.3'
+version '0.0.3.1'
 
 repositories {
     mavenCentral()
@@ -29,7 +29,7 @@ intellij {
 }
 patchPluginXml {
     changeNotes """
-      Compatibility with IntelliJ 2021.2
+      Fix Compatibility with IntelliJ 2021.2
     """
 }
 test {
