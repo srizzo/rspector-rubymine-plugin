@@ -46,9 +46,9 @@ public class LetDeclarationPsiUtil {
         return Objects.equals(symbol.getName(), getLetUsageName(letUsage));
     }
 
-    public static boolean namesMatch(RCall letDeclarationCall, RSymbol letOverride) {
+    public static boolean namesMatch(RCall letDeclarationCall, @Nullable RSymbol letOverride) {
         @Nullable RSymbol symbol = getLetIdentifyingSymbol(letDeclarationCall);
-        if (symbol == null) return false;
+        if (symbol == null || letOverride == null) return false;
 
         return Objects.equals(symbol.getName(), letOverride.getName());
     }
