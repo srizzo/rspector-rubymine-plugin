@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'io.github.srizzo'
-version '0.0.2.1'
+version '0.0.3'
 
 repositories {
     mavenCentral()
@@ -21,15 +21,15 @@ intellij {
     localPath = "/Applications/IntelliJ IDEA.app/Contents"
     runPluginVerifier.localPaths = ["/Applications/IntelliJ IDEA.app/Contents"]
     sandboxDirectory = "/usr/local/var/idea-sandbox"
-    plugins = ['org.jetbrains.plugins.ruby:211.6693.111',
-               'com.google.ide-perf:1.1.0',
+    plugins = ['org.jetbrains.plugins.ruby:212.4746.2',
+               'com.google.ide-perf:1.2.0',
                'com.intellij.java',
-               'PsiViewer:211-SNAPSHOT',
-               'io.github.srizzo.codebuddy.code-buddy-plugin:0.0.5']
+               'PsiViewer:212-SNAPSHOT',
+               'io.github.srizzo.codebuddy.code-buddy-plugin:0.0.6']
 }
 patchPluginXml {
     changeNotes """
-      Fix java.lang.NullPointerException trying code completion with let!
+      Compatibility with IntelliJ 2021.2
     """
 }
 test {
