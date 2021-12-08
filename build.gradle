@@ -1,10 +1,10 @@
 plugins {
     id 'java'
-    id 'org.jetbrains.intellij' version '0.7.1'
+    id 'org.jetbrains.intellij' version '0.7.2'
 }
 
 group 'io.github.srizzo'
-version '0.0.3.1'
+version '0.0.4'
 
 repositories {
     mavenCentral()
@@ -21,15 +21,15 @@ intellij {
     localPath = "/Applications/IntelliJ IDEA.app/Contents"
     runPluginVerifier.localPaths = ["/Applications/IntelliJ IDEA.app/Contents"]
     sandboxDirectory = "/usr/local/var/idea-sandbox"
-    plugins = ['org.jetbrains.plugins.ruby:212.4746.2',
+    plugins = ['org.jetbrains.plugins.ruby:213.5744.223',
                'com.google.ide-perf:1.2.0',
                'com.intellij.java',
-               'PsiViewer:212-SNAPSHOT',
-               'io.github.srizzo.codebuddy.code-buddy-plugin:0.0.6']
+               'PsiViewer:213-SNAPSHOT',
+               'io.github.srizzo.codebuddy.code-buddy-plugin:0.0.7']
 }
 patchPluginXml {
     changeNotes """
-      Fix Compatibility with IntelliJ 2021.2
+      Compatibility with IntelliJ 2021.3
     """
 }
 test {
