@@ -3,8 +3,11 @@
 # RSpector Changelog
 
 ## [Unreleased]
+## [0.0.8]
+### Added
+- Compatibility with IntelliJ 2023.1
 
-## [0.0.7] - 2023-01-17
+## [0.0.7]
 
 ### Added
 - Compatibility with IntelliJ 2022.3
