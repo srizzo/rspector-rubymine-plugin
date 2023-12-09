@@ -4,6 +4,9 @@
 
 ## [Unreleased]
 
+### Added
+- Compatibility with IntelliJ 2023.3
+
 ## [0.0.9] - 2023-07-29
 
 ### Added
