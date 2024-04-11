@@ -4,6 +4,8 @@
 
 ## [Unreleased]
 
+## [0.0.11] - 2024-04-11
+
 ### Added
 - Compatibility with IntelliJ 2024.1
 
@@ -37,7 +39,8 @@
 ### Added
 - Support IntelliJ 2022.1
 
-[Unreleased]: https://github.com/srizzo/rspector-rubymine-plugin/compare/v0.0.10...HEAD
+[Unreleased]: https://github.com/srizzo/rspector-rubymine-plugin/compare/v0.0.11...HEAD
+[0.0.11]: https://github.com/srizzo/rspector-rubymine-plugin/compare/v0.0.10...v0.0.11
 [0.0.10]: https://github.com/srizzo/rspector-rubymine-plugin/compare/v0.0.9...v0.0.10
 [0.0.9]: https://github.com/srizzo/rspector-rubymine-plugin/compare/v0.0.8...v0.0.9
 [0.0.8]: https://github.com/srizzo/rspector-rubymine-plugin/compare/v0.0.7...v0.0.8
