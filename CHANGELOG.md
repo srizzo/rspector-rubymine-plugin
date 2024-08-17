@@ -4,6 +4,9 @@
 
 ## [Unreleased]
 
+### Added
+- Compatibility with IntelliJ 2024.2
+
 ## [0.0.11] - 2024-04-11
 
 ### Added
