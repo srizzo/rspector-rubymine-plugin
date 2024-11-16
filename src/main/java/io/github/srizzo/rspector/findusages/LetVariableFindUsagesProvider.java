@@ -19,16 +19,16 @@ public final class LetVariableFindUsagesProvider extends RubyFindUsagesProvider 
     public String getDescriptiveName(@NotNull PsiElement element) {
 //        if (true) return "getDescriptiveName";
         if (!FindUsagesUtil.canFindUsagesFor(element))
-            return super.getDescriptiveName(element) + " [DN]";
-        return LetDeclarationPsiUtil.getLetDeclarationName(FindLetDeclarationsUtil.findLetDeclaration(element)) + " [DN]";
+            return super.getDescriptiveName(element);
+        return LetDeclarationPsiUtil.getLetDeclarationName(FindLetDeclarationsUtil.findLetDeclaration(element));
     }
 
     @NotNull
     public String getNodeText(@NotNull PsiElement element, boolean useFullName) {
 //        if (true) return "getNodeText";
         if (!FindUsagesUtil.canFindUsagesFor(element))
-            return super.getNodeText(element, useFullName) + " [NT]";
-        return LetDeclarationPsiUtil.getLetDeclarationName(FindLetDeclarationsUtil.findLetDeclaration(element)) + " [NT]";
+            return super.getNodeText(element, useFullName);
+        return LetDeclarationPsiUtil.getLetDeclarationName(FindLetDeclarationsUtil.findLetDeclaration(element));
     }
 
     @NotNull
