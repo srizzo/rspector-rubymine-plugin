@@ -4,6 +4,10 @@
 
 ## [Unreleased]
 
+### Added
+
+- Compatibility with IntelliJ 2025.1
+
 ## [0.0.13] - 2024-11-16
 
 ### Added
